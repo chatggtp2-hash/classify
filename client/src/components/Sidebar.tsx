@@ -94,7 +94,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
           </div>
           <div>
             <div className="text-sm font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-              SENTINEL
+              DATACOOL
             </div>
             <div className="text-[10px] tracking-widest uppercase" style={{ color: "var(--text-faint)" }}>
               Data Classification

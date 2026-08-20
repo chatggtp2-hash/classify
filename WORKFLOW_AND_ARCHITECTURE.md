@@ -1,4 +1,4 @@
-# Sentinel — Workflow & Backend Architecture
+# DataCool — Workflow & Backend Architecture
 
 ## 1. End-to-End Workflow
 
