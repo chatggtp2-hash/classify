@@ -1,0 +1,26 @@
+{
+  "PUBLIC": {
+    "externalSharingAllowed": true,
+    "downloadAllowed": true,
+    "encryptionRequired": false,
+    "approvalRequired": false
+  },
+  "INTERNAL": {
+    "externalSharingAllowed": false,
+    "downloadAllowed": true,
+    "encryptionRequired": false,
+    "approvalRequired": false
+  },
+  "CONFIDENTIAL": {
+    "externalSharingAllowed": false,
+    "downloadAllowed": true,
+    "encryptionRequired": true,
+    "approvalRequired": true
+  },
+  "RESTRICTED": {
+    "externalSharingAllowed": false,
+    "downloadAllowed": false,
+    "encryptionRequired": true,
+    "approvalRequired": true
+  }
+}

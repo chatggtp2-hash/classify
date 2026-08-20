@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0f1a;
+  --surface: #0f1729;
+  --surface-raised: #15203a;
+  --border: #223151;
+  --border-soft: #1a2740;
+  --text: #e9edf7;
+  --text-muted: #8b98b8;
+  --text-faint: #5c6987;
+
+  --accent: #35c6e8;
+  --accent-dim: #1c4f5c;
+
+  --c-public: #34b27b;
+  --c-public-dim: #12332a;
+  --c-internal: #4c8dff;
+  --c-internal-dim: #142542;
+  --c-confidential: #f2a93b;
+  --c-confidential-dim: #3a2a11;
+  --c-restricted: #ef4a5b;
+  --c-restricted-dim: #3a1620;
+
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(53, 198, 232, 0.06), transparent 45%),
+    radial-gradient(circle at 85% 100%, rgba(242, 169, 59, 0.05), transparent 40%);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--text);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Signature element: classification "seal" chip with a diagonal scanline
+   texture and a notched corner, echoing a security-stamp motif. */
+.class-seal {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  overflow: hidden;
+}
+
+.class-seal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 7px
+  );
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.class-seal-sm {
+  padding: 0.2rem 0.55rem 0.2rem 0.5rem;
+  font-size: 0.7rem;
+}
+.class-seal-lg {
+  padding: 0.4rem 0.9rem 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scan-sweep {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, rgba(53, 198, 232, 0.25), transparent);
+  animation: scan-sweep 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-sweep {
+    animation: none;
+  }
+}

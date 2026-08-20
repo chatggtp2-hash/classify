@@ -1,0 +1,52 @@
+[
+  {
+    "id": "688b632f-fbe2-4a43-9212-181d76ac71dc",
+    "originalFilename": "sample_personal_information.docx",
+    "currentFilename": "RESTRICTED_sample_personal_information.docx",
+    "filePath": "C:\\Users\\ADMIN\\Downloads\\word-classification-final\\word-classification\\server\\uploads\\RESTRICTED_sample_personal_information.docx",
+    "classification": "RESTRICTED",
+    "confidence": 94,
+    "riskScore": 95,
+    "findings": [
+      {
+        "type": "AADHAAR",
+        "count": 1,
+        "severity": "CRITICAL",
+        "examples": [
+          "XXXX XXXX 2222"
+        ]
+      },
+      {
+        "type": "PAN",
+        "count": 1,
+        "severity": "HIGH",
+        "examples": [
+          "XXXXX1234X"
+        ]
+      },
+      {
+        "type": "EMAIL",
+        "count": 1,
+        "severity": "LOW",
+        "examples": [
+          "a*********@example.com"
+        ]
+      }
+    ],
+    "reasons": [
+      "Risk score 95 exceeds CONFIDENTIAL threshold (39).",
+      "Detected 1x AADHAAR (severity CRITICAL).",
+      "Detected 1x PAN (severity HIGH).",
+      "Detected 1x EMAIL (severity LOW)."
+    ],
+    "policy": {
+      "externalSharingAllowed": false,
+      "downloadAllowed": false,
+      "encryptionRequired": true,
+      "approvalRequired": true
+    },
+    "classificationMethod": "RULE_BASED",
+    "createdAt": "2026-08-20T08:55:24.393Z",
+    "updatedAt": "2026-08-20T08:55:24.393Z"
+  }
+]

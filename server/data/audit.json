@@ -1,0 +1,17 @@
+[
+  {
+    "id": "e36cc142-c257-4adf-bbf0-cd2ebd65cc42",
+    "documentId": "688b632f-fbe2-4a43-9212-181d76ac71dc",
+    "action": "Document uploaded",
+    "user": "system",
+    "timestamp": "2026-08-20T08:55:24.393Z"
+  },
+  {
+    "id": "fef404d1-9163-4e42-9122-c2465da59ee3",
+    "documentId": "688b632f-fbe2-4a43-9212-181d76ac71dc",
+    "action": "Automated classification",
+    "newClassification": "RESTRICTED",
+    "user": "system",
+    "timestamp": "2026-08-20T08:55:24.595Z"
+  }
+]
